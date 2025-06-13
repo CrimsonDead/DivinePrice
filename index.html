@@ -42,7 +42,7 @@
     <script>
         async function fetchPrice() {
             try {
-                const response = await fetch('https://corsproxy.io/?https://poe.ninja/api/data/currencyoverview?league=Standard&type=Currency');
+                const response = await fetch('https://corsproxy.io/?https://poe.ninja/api/data/currencyoverview?league=Mercenaries&type=Currency');
                 const data = await response.json();
                 const divinePrice = data.lines.find(item => item.currencyTypeName === 'Divine Orb').chaosEquivalent;
                 document.getElementById('price').innerText = `${divinePrice}`;
